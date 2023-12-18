@@ -1,39 +1,90 @@
---- 
+---
+import "../shared/global.css"
 interface Props {
-	title: string;
+  title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#4C1B6A" />
+    <meta name="theme-preferer" content="dark" />
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <meta name="yandex-verification" content="f12a813a01bd58d2" />
+    <title>{title}</title>
+    <link
+      rel="preload"
+      href="/fonts/NTSomic-Bold.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    <meta
+      name="description"
+      content="Наша студия воплощает ваши идеи на патчах. Мы делаем нашивки, любой сложности, по вашему дизайну."
+    />
+    <meta property="og:image" content="/favicon.png" />
+    <meta
+      property="og:description"
+      content="Мы делаем патчи, любой сложности, по вашему дизайну."
+    />
+    <meta property="og:title" content="Гильдия вышивки | Latte Mattina" />
+    <meta property="og:site_name" content="Latte Mattina" />
+
+    <!-- Yandex.Metrika counter -->
+    <script async defer type="text/javascript">
+      ;(function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            ;(m[i].a = m[i].a || []).push(arguments)
+          }
+        m[i].l = 1 * new Date()
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return
+          }
+        }
+        ;(k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a)
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      )
+
+      ym(95124555, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+      })
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/95124555"
+          style="position:absolute; left:-9999px;"
+          alt=""
+        />
+      </div></noscript
+    >
+    <!-- /Yandex.Metrika counter -->
+  </head>
+  <body>
+    <div class="layout">
+      <slot />
+    </div>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151A;
-		background-size: 224px;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>

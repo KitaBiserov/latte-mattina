@@ -1,0 +1,59 @@
+---
+interface Props {
+  title: string
+  text: string
+}
+const { title, text } = Astro.props
+---
+
+<details>
+  <summary>
+    {title}
+  </summary>
+  <div set:html={text} />
+</details>
+
+<style>
+  details {
+    transition: all 300ms ease-in;
+    border-radius: var(--ds-rounded-md);
+    width: 100%;
+    margin-bottom: 1rem;
+    & div {
+      padding: 1rem;
+    }
+    & summary {
+      border-bottom: none;
+      padding: 1rem;
+      font-size: 24pt;
+      font-weight: 800;
+      -webkit-user-select: none;
+      cursor: pointer;
+      user-select: none;
+      width: 100%;
+    }
+    & summary::marker {
+      content: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="32px"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" /></svg>');
+    }
+  }
+
+  details[open] summary::marker {
+    content: url('data:image/svg+xml; utf-8, <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="32px"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>');
+  }
+  details div {
+    padding: 1rem;
+  }
+
+  details summary {
+    border-bottom: none;
+    padding: 1rem;
+    font-size: 24pt;
+    font-weight: 800;
+  }
+  details[open] {
+    background-color: var(--ds-gray-600);
+  }
+  details[open] summary {
+    border-bottom: 1px solid var(--ds-alpha);
+  }
+</style>

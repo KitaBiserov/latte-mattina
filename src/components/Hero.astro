@@ -1,0 +1,356 @@
+---
+import { Image } from "astro:assets"
+import FirstAsset from "../shared/assets/lm-asset-1.webp"
+import SecondAsset from "../shared/assets/lm-asset-2.webp"
+import ThirdAsset from "../shared/assets/lm-asset-3.webp"
+import FourAsset from "../shared/assets/lm-asset-4.webp"
+import FifthAsset from "../shared/assets/lm-asset-5.webp"
+import SixAsset from "../shared/assets/lm-asset-6.webp"
+---
+
+<section class="hero">
+  <div class="intro">
+    <h1>Мы делаем патчи</h1>
+    <p>
+      чтобы <marker>вы носили</marker> свои идеи
+    </p>
+    <div class="btns">
+      <a
+        aria-label="Внешняя ссылка на профиль Авито"
+        id="hero-avito-btn"
+        rel="nofollow"
+        class="btn btn--primary btn--contained"
+        href="https://m.avito.ru/user/ba4a1c2b41a38f02962c88013f8b1794/profile?src=sharing"
+      >
+        Пропатчится
+      </a>
+    </div>
+  </div>
+  <ul>
+    <li>
+      <Image
+        width={325}
+        src={FirstAsset}
+        alt="You look awsome with us patches!"
+      />
+    </li>
+    <li>
+      <Image
+        width={325}
+        src={SixAsset}
+        alt="You look awsome with us patches!!"
+      />
+    </li>
+    <li>
+      <Image
+        width={325}
+        src={SecondAsset}
+        alt="You look awsome with us patches!!!"
+      />
+    </li>
+    <li>
+      <Image
+        width={325}
+        src={FourAsset}
+        alt="You look awsome with us patches!!!!"
+      />
+    </li>
+    <li>
+      <Image
+        width={325}
+        src={ThirdAsset}
+        alt="You look awsome with us patches"
+      />
+    </li>
+    <li>
+      <Image
+        width={325}
+        src={FifthAsset}
+        alt="You look awsome with us patches!!!!!"
+      />
+    </li>
+  </ul>
+</section>
+<style>
+  .hero {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+    align-items: flex-start;
+    user-select: none;
+    -webkit-user-select: none;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    padding: 2rem;
+    overflow: hidden;
+    & img {
+      filter: brightness(0.7) saturate(0.9);
+      border-radius: var(--ds-rounded-sm);
+    }
+  }
+
+  .intro {
+    z-index: 10;
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    padding: 1rem;
+  }
+
+  .intro h1 {
+    line-height: 1.1;
+    font-weight: bold;
+    text-align: right;
+    text-wrap: balance;
+    margin-bottom: 0.1rem;
+  }
+
+  .intro p {
+    font-size: 4vw;
+    text-align: right;
+  }
+
+  .img img {
+    animation: images 300ms 5s infinite ease-in-out;
+    animatin-direction: forward;
+    filter: brightness(80%);
+    border-radius: 6px;
+    width: 325px;
+    height: auto;
+  }
+  .hero .btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  .hero button {
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+  }
+
+  .titleVisible {
+    animation: title 1 300ms ease-in-out;
+  }
+  @media (width > 1400px) {
+    .hero {
+      height: 800px;
+
+      & .intro {
+        flex: 1;
+      }
+
+      & ul {
+        width: fit-content;
+        display: flex;
+        flex: 2;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        animation: slide-top 10s linear 0s 1 forwards;
+      }
+    }
+    .intro h1 {
+      font-size: 6vw;
+    }
+    .intro p {
+      font-size: 24pt;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .hero {
+      display: flex;
+      flex-direction: column;
+      height: 800px;
+      position: relative;
+      & ul {
+        display: flex;
+        position: relative;
+        animation: hero-md-animation 5s ease-in 0s 1 forwards;
+        left: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    @keyframes hero-md-animation {
+      from {
+        top: -45%;
+      }
+      to {
+        top: -80%;
+      }
+    }
+    .hero .intro {
+      justify-content: space-around;
+      width: -moz-fit-content;
+      height: fit-content;
+      width: fit-content;
+      border-radius: var(--ds-rounded-sm);
+      background-color: var(--ds-alpha);
+      backdrop-filter: blur(4px) brightness(0.4);
+      align-self: center;
+      text-align: center;
+      -webkit-backdrop-filter: blur(4px) brightness(0.4);
+    }
+
+    .hero .intro h1 {
+      text-align: center;
+      font-size: 8vw;
+    }
+    .hero .btns {
+      justify-content: center;
+    }
+
+    .hero p {
+      text-align: center;
+      font-size: 20pt;
+    }
+  }
+  @media (max-width: 600px) {
+    .hero .btns {
+      justify-content: center;
+    }
+    .hero {
+      overflow: hidden;
+      gap: 1rem;
+      align-items: flex-start;
+      & img {
+        aspect-ratio: auto;
+        height: auto;
+        width: 225px;
+      }
+      & .intro {
+        & p {
+          font-size: 18pt;
+        }
+        & h1 {
+          line-height: auto;
+          font-size: 32pt;
+        }
+        align-items: center;
+        gap: 0rem;
+      }
+      & ul {
+        gap: 1rem;
+      }
+    }
+
+    .hero .intro {
+      align-items: stretch;
+      justify-content: flex-start;
+      backdrop-filter: none;
+      background-color: transparent;
+      -webkit-backdrop-filter: none;
+    }
+
+    .hero ul {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      position: static;
+      height: 320px;
+      width: 100%;
+    }
+    .hero ul li {
+      flex: 1;
+      animation-fill-mode: forwards;
+      animation-name: slide-left;
+      animation-timing-function: linear;
+      animation-duration: 10s;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+    }
+  }
+  @keyframes slide-bottom {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(200px);
+    }
+  }
+
+  @keyframes slide-top {
+    0% {
+      transform: translateY(-50%);
+    }
+
+    100% {
+      transform: translateY(0%);
+    }
+  }
+  @keyframes slide-left {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @media (orientation: landscape) and (max-width: 900px) {
+    .hero .btns {
+      justify-content: center;
+    }
+    .hero {
+      overflow: hidden;
+      gap: 1rem;
+      align-items: flex-start;
+      & img {
+        aspect-ratio: auto;
+        height: auto;
+        width: 225px;
+      }
+      & .intro {
+        & p {
+          font-size: 18pt;
+        }
+        & h1 {
+          line-height: auto;
+          font-size: 32pt;
+        }
+        align-items: center;
+        gap: 0rem;
+      }
+      & ul {
+        gap: 1rem;
+      }
+    }
+
+    .hero .intro {
+      align-items: stretch;
+      justify-content: flex-start;
+      backdrop-filter: none;
+      background-color: transparent;
+      -webkit-backdrop-filter: none;
+    }
+
+    .hero ul {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      position: static;
+      height: 320px;
+      width: 100%;
+    }
+    .hero ul li {
+      flex: 1;
+      animation-fill-mode: forwards;
+      animation-name: slide-left;
+      animation-timing-function: linear;
+      animation-duration: 10s;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+    }
+  }
+</style>

@@ -1,0 +1,130 @@
+[
+    {
+        "id": 0,
+        "image": "/products/cyberpunklucy",
+        "description": "Ахегао",
+        "size": "4 x 12",
+        "title": "Люси",
+        "category": 1
+    },
+    {
+        "id": 2,
+        "image": "/products/mikasa",
+        "size": "120 x 60",
+        "title": "Микаса",
+        "category": 1
+    },
+    {
+        "id": 3,
+        "image": "/products/gurren-lagan",
+        "size": "120x60",
+        "title": "Камино",
+        "category": 1
+    },
+    {
+        "id": 5,
+        "image": "/products/finger",
+        "title": "Палец",
+        "size": "8 x 12",
+        "category": 2
+    },
+    {
+        "id": 6,
+        "image": "/products/atakatitanov",
+        "title": "Атака Титанов",
+        "size": "8 x 10",
+        "category": 1
+    },
+    {
+        "id": 7,
+        "image": "/products/levi",
+        "title": "Леви",
+        "size": "8 x 8",
+        "category": 1
+    },
+    {
+        "id": 8,
+        "image": "/products/glazaboyatsya",
+        "title": "Глаза боятся",
+        "size": "9 x 7",
+        "category": 2
+    },
+    {
+        "id": 9,
+        "image": "/products/russianbear",
+        "title": "Русский Медведь",
+        "size": "5",
+        "category": 2
+    },
+    {
+        "id": 10,
+        "image": "/products/samurai",
+        "title": "Самурай",
+        "size": "8",
+        "category": 2
+    }, 
+    {
+        "id": 0,
+        "image": "/products/cyberpunklucy",
+        "description": "Ахегао",
+        "size": "4 x 12",
+        "title": "Люси",
+        "category": 1
+    },
+    {
+        "id": 2,
+        "image": "/products/mikasa",
+        "size": "120 x 60",
+        "title": "Микаса",
+        "category": 1
+    },
+    {
+        "id": 3,
+        "image": "/products/gurren-lagan",
+        "size": "120x60",
+        "title": "Камино",
+        "category": 1
+    },
+    {
+        "id": 5,
+        "image": "/products/finger",
+        "title": "Палец",
+        "size": "8 x 12",
+        "category": 2
+    },
+    {
+        "id": 6,
+        "image": "/products/atakatitanov",
+        "title": "Атака Титанов",
+        "size": "8 x 10",
+        "category": 1
+    },
+    {
+        "id": 7,
+        "image": "/products/levi",
+        "title": "Леви",
+        "size": "8 x 8",
+        "category": 1
+    },
+    {
+        "id": 8,
+        "image": "/products/glazaboyatsya",
+        "title": "Глаза боятся",
+        "size": "9 x 7",
+        "category": 2
+    },
+    {
+        "id": 9,
+        "image": "/products/russianbear",
+        "title": "Русский Медведь",
+        "size": "5",
+        "category": 2
+    },
+    {
+        "id": 10,
+        "image": "/products/samurai",
+        "title": "Самурай",
+        "size": "8",
+        "category": 2
+    }
+]

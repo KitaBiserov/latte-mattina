@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Страница не найдена">
+  <main>
+    <section class="sc-not-found container">
+      <span>💧</span>
+      <h1>Мы не нашли эту страницу</h1>
+      <a class="a" href="/" target="_self" rel="nofollow"
+        >Вернуться на главную</a
+      >
+    </section>
+  </main>
+</Layout>
+<style>
+  .sc-not-found {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  .sc-not-found span {
+    animation: droplet 800ms ease-out 0s 1 forwards;
+  }
+
+  .sc-not-found a {
+    align-self: center;
+  }
+
+  @keyframes droplet {
+    from {
+      opacity: 0;
+      transform: translateY(-200px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+</style>

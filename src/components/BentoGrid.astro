@@ -1,0 +1,182 @@
+<section id="comments" class="bentoGrid container">
+  <div class="colLg">
+    <span class="bigNumber primary">&gt;100</span>
+    <p>
+      доволных клиентов
+      <a
+        aria-label="Внешняя ссылка на профиль Авито"
+        class="a--external"
+        target="__blank"
+        href="https://www.avito.ru/user/ba4a1c2b41a38f02962c88013f8b1794/profile/all/odezhda_obuv_aksessuary?src=sharing&sellerId=ba4a1c2b41a38f02962c88013f8b1794"
+        title="https://www.avito.ru/user/ba4a1c2b41a38f02962c88013f8b1794/profile/all/odezhda_obuv_aksessuary?src=sharing&sellerId=ba4a1c2b41a38f02962c88013f8b1794"
+        >смотреть все отзывы</a
+      >
+    </p>
+  </div>
+  <div class="colSm">
+    <span class="bigNumber secondary"> 5</span>
+    <p>
+      <a
+        aria-label="Внешняя ссылка на профиль Авито"
+        class="a--external"
+        title="https://m.avito.ru/user/ba4a1c2b41a38f02962c88013f8b1794/profile?src=sharing"
+        href="https://m.avito.ru/user/ba4a1c2b41a38f02962c88013f8b1794/profile?src=sharing"
+        target="__blank"
+      >
+        абсолютная оценка</a
+      >
+    </p>
+  </div>
+  <div class="colMd">
+    <h4>Свыше 100 штук</h4>
+    <p>Самый крупный заказ</p>
+  </div>
+</section>
+<style>
+  .bentoGrid {
+    display: grid;
+    justify-items: stretch;
+    align-items: center;
+    gap: 1rem 0.5rem;
+
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 1rem;
+  }
+
+  .colMd {
+    padding: 1rem;
+    display: flex;
+    grid-column-start: span 2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--ds-gray-600);
+    border-radius: var(--ds-rounded-lg);
+  }
+
+  .colSm {
+    & p {
+      padding: 0;
+      margin: 0;
+    }
+    & .bigNumber {
+      top: -12%;
+    }
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    grid-column-start: span 1;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 150% 10%;
+    background-size: contain;
+    border-radius: var(--ds-rounded-lg);
+    border: 2px solid var(--ds-gray-600);
+    background-image: url('data:image/svg+xml; utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="58" height="60" viewBox="0 0 58 60" fill="none">  <path d="M57.73 23.34C57.4462 22.4604 56.8883 21.6946 56.138 21.1548C55.3876 20.615 54.4843 20.3295 53.56 20.34H38L32.51 3.48C32.2775 2.7337 31.8103 2.08238 31.1779 1.62294C30.5455 1.16349 29.7816 0.920464 29 0.930004C28.2184 0.920464 27.4546 1.16349 26.8221 1.62294C26.1897 2.08238 25.7225 2.7337 25.49 3.48L20 20.31H4.44001C3.51286 20.3069 2.60865 20.5981 1.85756 21.1417C1.10647 21.6853 0.547245 22.4532 0.260397 23.3349C-0.0264502 24.2165 -0.0261219 25.1665 0.261335 26.048C0.548791 26.9294 1.10855 27.6969 1.86001 28.24L14.47 37.39L9.00001 54.23C8.7573 54.9717 8.75595 55.7712 8.99617 56.5136C9.23639 57.2561 9.7058 57.9033 10.3369 58.3622C10.9681 58.8211 11.7285 59.0681 12.5088 59.0677C13.2892 59.0673 14.0493 58.8196 14.68 58.36L29 48L43.32 58.36C43.9494 58.8215 44.7096 59.0703 45.49 59.0703C46.2705 59.0703 47.0306 58.8215 47.66 58.36C48.2974 57.9069 48.7719 57.2605 49.0132 56.5167C49.2546 55.7728 49.2499 54.971 49 54.23L43.53 37.39L56.14 28.24C56.8936 27.7001 57.4545 26.9332 57.7407 26.0514C58.0268 25.1697 58.023 24.2195 57.73 23.34ZM45.09 28.34L36.09 34.87L39.52 45.44C39.5861 45.6408 39.5868 45.8573 39.5221 46.0585C39.4575 46.2598 39.3307 46.4353 39.16 46.56C38.9888 46.6852 38.7821 46.7526 38.57 46.7526C38.3579 46.7526 38.1513 46.6852 37.98 46.56L29 40L20 46.53C19.8288 46.6552 19.6221 46.7226 19.41 46.7226C19.1979 46.7226 18.9913 46.6552 18.82 46.53C18.6493 46.4053 18.5226 46.2298 18.4579 46.0285C18.3932 45.8273 18.394 45.6108 18.46 45.41L21.9 34.86L12.9 28.33C12.7293 28.2053 12.6026 28.0298 12.5379 27.8285C12.4732 27.6273 12.474 27.4108 12.54 27.21C12.6054 27.0095 12.7325 26.8348 12.9031 26.7109C13.0737 26.587 13.2791 26.5202 13.49 26.52H24.61L28.05 16C28.1004 15.7791 28.2243 15.5818 28.4014 15.4405C28.5785 15.2992 28.7984 15.2222 29.025 15.2222C29.2516 15.2222 29.4715 15.2992 29.6486 15.4405C29.8258 15.5818 29.9497 15.7791 30 16L33.44 26.57H44.5C44.7193 26.5593 44.9361 26.621 45.1168 26.7457C45.2975 26.8704 45.4322 27.0512 45.5 27.26C45.5496 27.4589 45.5368 27.6682 45.4635 27.8596C45.3901 28.0509 45.2598 28.2152 45.09 28.33V28.34Z" fill="rgb(250,199,71)"/></svg>');
+  }
+
+  .colLg {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    background-image: url("/lm-asset-comments.webp");
+    padding: 1rem;
+    position: relative;
+    border-radius: var(--ds-rounded-lg);
+    border: 2px solid var(--ds-alpha);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    grid-column-start: span 3;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 100%;
+    border-radius: 24px;
+    height: 225px;
+  }
+  .bigNumber {
+    z-index: -1;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 8rem;
+    line-height: 1;
+    border: none;
+  }
+  .primary {
+    background: -webkit-linear-gradient(
+      var(--ds-colors-primary) 20%,
+      var(--ds-gray-600)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .secondary {
+    background: -webkit-linear-gradient(
+      var(--ds-colors-secondary) 20%,
+      var(--ds-gray-600)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  @media (width > 1400px) {
+    .colLg {
+      background-position: 90%;
+      background-size: 40%;
+    }
+    .colSm {
+      background-position: 100%;
+    }
+  }
+  @media (max-width: 600px) {
+    .bigNumber {
+      line-height: 1;
+      font-size: 4rem;
+      position: static;
+      line-height: 1;
+    }
+    .bentoGrid {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: stretch;
+    }
+    .colMd {
+      grid-column-start: 1;
+      grid-column-start: unset;
+    }
+    .colSm {
+      background-position: 100%;
+      background-repeat: repeat-y;
+      background-size: auto;
+      grid-column-start: 1;
+      grid-column-start: unset;
+      text-align: left;
+    }
+
+    .colLg {
+      & p {
+        padding: 0;
+        text-align: center;
+        margin-bottom: auto;
+        justify-self: flex-start;
+      }
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      grid-column-start: 1;
+      grid-column-start: unset;
+      height: 320px;
+      background-position-y: 160%;
+    }
+  }
+</style>
