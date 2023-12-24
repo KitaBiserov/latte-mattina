@@ -14,7 +14,7 @@ export const Card = ({
     <div id={`${id}`} className="card" title={title}>
       <picture>
         <source srcSet={`${image}.webp`} type="image/webp" />
-        <img width={225} src={`${image}.png`} alt={title} />
+        <img  loading="lazy" width={225} src={`${image}.png`} alt={title} />
       </picture>
       <div className="textbox">
   <span> {title}</span> 

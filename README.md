@@ -27,7 +27,13 @@ cd /path/to/project
 ```PowerShell
 pnpm install
 ```
-
+5. Распаковать архивы с статическими файлами 
+   ```PowerShell
+      Expand-Archive -Path ./shared.assets.zip -DestinationPath ./src/shared 
+   ```
+   ```PowerShell
+      Expand-Archive -Path ./public.zip -DestinationPath .
+   ```
 5. Запустить режим разработчика
 
 ```PowerShell

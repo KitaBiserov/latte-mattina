@@ -12,13 +12,13 @@ import ProductSection from "../components/ProductsSection"
   const date = new Date().getFullYear()
   document.getElementById("date")!.innerHTML = date.toString()
 </script>
-<Layout title="Нашивки, шевроны на заказ в Москве">
+<Layout title="Пошив нашивок, шевронов в Моске | LatteMattina">
   <main>
     <Header />
     <Hero />
     <section class="sc-products">
       <div class="title-block container">
-        <h2 id="products">Продукты</h2>
+        <h2 id="products">Нашивки</h2>
 
         <p>
           Предлагаем <strong>большой выбор</strong> дизайнерских решений, от
@@ -33,40 +33,52 @@ import ProductSection from "../components/ProductsSection"
       </div>
     </section>
     <ProductSection client:only="solid-js" />
-    <BentoGrid />
-    <Social />
-    <section>
-      <div class="container">
-        <h2 id="Q&A">Вопрос-Ответ</h2>
-        <Question
-          title="Как мы работаем"
-          text="<strong>Работаем только по предоплате - 50%</strong> <br/> Все вопросы и нюансы обсуждаются сразу же, в том числе и вопрос с доставкой. <br/> Прежде, чем приступить к вышивке, присылаем макет на согласование"
-        />
-        <Question
-          title="Нужна липучка"
-          text="Пришиваем велкро липучку за доп.плату - 70 рублей"
-        />
-        <Question
-          title="Часы работы"
-          text="Находимся на м.Севастопольская <br/> Мы работаем с понедельника по пятницу с 10:00 до 19:00, в выходные принимаем только заказы!"
-        />
-        <Question
-          title="Время изготовления"
-          text="<strong>От 2 до 5 дней</strong> <br/> Ручная работа. <br/> Мы используем специальную программу, где настраиваем стежки, их количество, цвет вышиваемой области. Также мы учитываем сложность вашего макета. Из этих параметров складывается итоговое время изготовления вашего заказа. <br/> Максимальный размер, с которым работаем на данный момент - 10х17 см. <br/> Все края нашивок и патчей специально обрабатываются, что делает нашивки долговечными в использовании. "
-        />
-        <Question
-          title="Доставка"
-          text="СДЕК, Почта России, Достависта, Яндекс Доставка <br/> <strong>Примерная стомиость 280 рублей</strong>"
-        />
-      </div>
+    <section class="container">
+      <h2>Как мы работаем</h2>
+      <article>
+        <p><marker>Работаем только по предоплате - 50%</marker></p>
+         Сначала мы обсуждаем макет, и решаем вопрос с доставкой. Если макет вам
+        нравится, мы приступаем к вышивке. С помощью специальной программы мы
+        настраиваем стежки, их количество и цвет вышиваемой области. <br
+        /><strong> Мы используем лучшие материалы,</strong> поэтому наши шевроны
+        получаются прочными и красочными. Все края нашивок специально
+        обрабатываются, чтобы они оставались долговечными в использовании.
+      </article>
     </section>
-    <footer>
-      <div class="container">
-        <div class="footer">
-          <div class="logo">&#10022; Latte Mattina</div>
-          <span id="date"></span>
-        </div>
-      </div>
-    </footer>
   </main>
+  <BentoGrid />
+  <Social />
+  <section>
+    <div class="container">
+      <h2 id="Q&A">Вопрос-Ответ</h2>
+      <Question
+        title="Нужна липучка"
+        text="Пришиваем велкро липучку за доп.плату - 70 рублей"
+      />
+      <Question
+        title="Максимальный размер"
+        text="Максимальный размер, с которым работаем на данный момент - 10х17 см"
+      />
+      <Question
+        title="Часы работы"
+        text="Находимся на м.Севастопольская <br/> Мы работаем с понедельника по пятницу с 10:00 до 19:00, в выходные принимаем только заказы!"
+      />
+      <Question
+        title="Время изготовления"
+        text="<strong>От 2 до 5 дней</strong> "
+      />
+      <Question
+        title="Доставка"
+        text="СДЕК, Почта России, Достависта, Яндекс Доставка <br/> <strong>Примерная стомиость 280 рублей</strong>"
+      />
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="footer">
+        <div class="logo">&#10022; Latte Mattina</div>
+        <span id="date"></span>
+      </div>
+    </div>
+  </footer>
 </Layout>

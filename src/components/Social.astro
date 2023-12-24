@@ -78,13 +78,12 @@
     align-items: center;
   }
   .social a:nth-child(2) {
-    & .socialItem svg {
-      fill: var(--ds-colors-secondary);
-    }
     padding: 1rem;
     flex: 2;
   }
-
+  .social a:nth-child(2) .socialItem svg {
+    fill: var(--ds-colors-secondary);
+  }
   .social a::hover {
     color: var(--ds-colors-secondary);
     fill: var(--ds-colors-secondary);
@@ -114,10 +113,10 @@
       height: unset;
       padding: 1rem 0;
       gap: 2rem;
-      & a {
-        flex-direction: column;
-        text-align: left;
-      }
+    }
+    .social a {
+      flex-direction: column;
+      text-align: left;
     }
   }
 </style>

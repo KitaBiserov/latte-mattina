@@ -157,6 +157,9 @@ section {
   position: relative;
   z-index: 10;
 }
+.categories > p {
+  contain: size;
+}
 .btn:focus {
   outline: 1rem var(--ds-colors-primary);
 }
@@ -257,9 +260,11 @@ main {
   gap: 1rem;
   text-align: left;
 }
+article,
 p {
   color: var(--ds-gray-100);
 }
+
 a {
   cursor: pointer;
   color: var(--ds-gray-300);
@@ -412,22 +417,19 @@ footer hr {
   padding: 1rem;
   width: 325px;
   text-overflow: "-";
-
-  & .textbox {
-    opacity: 0;
-  }
-
-  & .textbox span {
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: "...";
-    width: calc(325px - 2rem);
-    font-size: 20pt;
-    font-weight: 700;
-  }
 }
-
+.card .textbox {
+  opacity: 0;
+}
+.card .textbox span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: "...";
+  width: calc(325px - 2rem);
+  font-size: 20pt;
+  font-weight: 700;
+}
 .card img {
   width: 225px;
   aspect-ratio: 2/1;
@@ -452,16 +454,15 @@ footer hr {
 .card:hover {
   background: var(--ds-gray-800);
   filter: brightness(170%);
-  &.textbox {
-    transition: opacity 300ms ease-in-out;
-    opacity: 1;
-  }
-  & .title {
-    transition: opacity 300ms ease-in-out;
-    opacity: 1;
-  }
 }
-
+.card:hover .textbox {
+  transition: opacity 300ms ease-in-out;
+  opacity: 1;
+}
+.card:hover .title {
+  transition: opacity 300ms ease-in-out;
+  opacity: 1;
+}
 .card:hover .card:focus {
   outline: 1px solid var(--bs-palette-primary);
 }
@@ -475,13 +476,15 @@ footer hr {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  & button {
-    top: 100%;
-    left: 50%;
-    position: absolute;
-    align-self: center;
-    justify-self: center;
-  }
+  contain: content;
+}
+.ticker > button {
+  display: block;
+  top: 100%;
+  left: 50%;
+  position: absolute;
+  align-self: center;
+  justify-self: center;
 }
 .ticker-expand {
   display: block;
@@ -495,13 +498,12 @@ footer hr {
   display: none;
 }
 
-.ticker {
-  & .wrap {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: flex-start;
-    align-items: flex-start;
-  }
+.ticker .wrap {
+  contain: content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: flex-start;
+  align-items: flex-start;
 }
 @keyframes move {
   to {
@@ -551,8 +553,12 @@ footer hr {
   filter: brightness(170%);
 }
 @media (width > 1400px) {
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
   .container {
-    max-width: 1380px;
+    max-width: 1440px;
   }
 
   .ticker {
@@ -560,21 +566,15 @@ footer hr {
     width: 100%;
     justify-content: flex-start;
     align-items: stretch;
-    & .wrap {
-      grid-template-columns: repeat(4, 1fr);
-    }
   }
 }
 @media (max-width: 1300px) {
   .container {
     max-width: 1000px;
   }
-  .ticker-link-left {
-    display: block;
-    right: 10%;
-  }
-  .ticker-link-right {
-    display: block;
+  .ticker {
+    justify-content: flex-start;
+    overflow-y: hidden;
   }
 }
 
@@ -594,21 +594,21 @@ footer hr {
     max-width: 420px;
   }
 
-  .card {
-    & p {
-      padding: 0;
-    }
+  .card p {
+    padding: 0;
   }
+
   .ticker {
     min-height: unset;
-    & .wrap {
-      display: flex;
-    }
-    & button {
-      display: none;
-    }
+  }
+  .ticker-expand {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
   }
   .ticker .wrap {
+    display: flex;
     width: 100%;
     scrollbar-width: none;
     overflow: scroll;

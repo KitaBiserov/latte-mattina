@@ -55,15 +55,14 @@
     background-color: var(--ds-gray-600);
     border-radius: var(--ds-rounded-lg);
   }
-
+  .colSm p {
+    padding: 0;
+    margin: 0;
+  }
+  .colSm .bigNumber {
+    top: -12%;
+  }
   .colSm {
-    & p {
-      padding: 0;
-      margin: 0;
-    }
-    & .bigNumber {
-      top: -12%;
-    }
     position: relative;
     padding: 1rem;
     display: flex;
@@ -162,21 +161,22 @@
     }
 
     .colLg {
-      & p {
-        padding: 0;
-        text-align: center;
-        margin-bottom: auto;
-        justify-self: flex-start;
-      }
       text-align: left;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: left;
       justify-content: space-between;
       grid-column-start: 1;
       grid-column-start: unset;
       height: 320px;
+      background-image: none;
       background-position-y: 160%;
+    }
+    .colLg p {
+      padding: 0;
+      text-align: left;
+      margin-bottom: auto;
+      justify-self: flex-start;
     }
   }
 </style>
