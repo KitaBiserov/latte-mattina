@@ -56,7 +56,8 @@ pnpm build
 
 1. Добавить название, размер, путь к изображению в файл `./src/shared/patches.json`
 
-````JSON {
+```JSON
+{
     id: 999,
     title: "Example",
     size: "9x9",
