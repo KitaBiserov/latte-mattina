@@ -32,7 +32,7 @@ pnpm install
       Expand-Archive -Path ./shared.assets.zip -DestinationPath ./src/shared 
    ```
    ```PowerShell
-      Expand-Archive -Path ./public.zip -DestinationPath .
+      Expand-Archive -Path ./public.zip -DestinationPath . -Force
    ```
 5. Запустить режим разработчика
 
@@ -56,7 +56,7 @@ pnpm build
 
 1. Добавить название, размер, путь к изображению в файл `./src/shared/patches.json`
 
-```JSON
+Пример:
 {
     id: 999,
     title: "Example",
@@ -64,7 +64,7 @@ pnpm build
     image: "/products/example"
     category: 0, // 0, 1, 2, 3
 }
-```
+
 
 3. Добавить изображение в формате `.webp` или `.png` в папку `./public/products/` (Пример: `./public/products/example`)
 
