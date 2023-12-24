@@ -63,7 +63,8 @@ pnpm build
     size: "9x9",
     image: "/products/example"
     category: 0, // 0, 1, 2, 3
-}```
+}
+```
 
 3. Добавить изображение в формате `.webp` или `.png` в папку `./public/products/` (Пример: `./public/products/example`)
 
